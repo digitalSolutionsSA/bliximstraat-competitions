@@ -111,6 +111,18 @@ export default function App() {
             <span className={styles.prizeAmount}>R 2 000<span className={styles.priceCents}>.00</span></span>
           </div>
 
+          <div className={styles.datesBox}>
+            <p className={styles.dateItem}>
+              <span className={styles.dateLabel}>KOMPETISIE SLUIT</span>
+              <span className={styles.dateValue}>30 JUNIE 2026</span>
+            </p>
+            <div className={styles.datesDivider} />
+            <p className={styles.dateItem}>
+              <span className={styles.dateLabel}>TREKKING LIVE</span>
+              <span className={styles.dateValue}>5 JULIE 2026</span>
+            </p>
+          </div>
+
           <button className={styles.ctaBtn} onClick={scrollToForm}>
             <span>SKRYF NOU IN!!</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -118,7 +130,7 @@ export default function App() {
             </svg>
           </button>
 
-          <p className={styles.tAndC}>Terme en voorwaardes geld.</p>
+          <p className={styles.tAndC}>T's &amp; C's van toepassing.</p>
         </div>
       </section>
 
