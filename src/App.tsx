@@ -74,12 +74,14 @@ export default function App() {
       <section className={styles.hero}>
         <video
           className={styles.heroBg}
-          src="/hero.mp4"
           autoPlay
           muted
           loop
           playsInline
-        />
+          preload="auto"
+        >
+          <source src="/hero.mp4" type="video/mp4" />
+        </video>
         <div className={styles.heroOverlay} />
 
         {/* Neon light beams */}
@@ -87,7 +89,10 @@ export default function App() {
         <div className={`${styles.beam} ${styles.beamRight}`} />
 
         <div className={styles.heroContent}>
-          <img src="/logo.png" alt="Blixim Straat" className={styles.logo} />
+          <picture>
+            <source srcSet="/logo.webp" type="image/webp" />
+            <img src="/logo.png" alt="Blixim Straat" className={styles.logo} fetchPriority="high" />
+          </picture>
 
           <div className={styles.tagline}>
             <span className={styles.taglineAccent}>VIND DIE LIRIEKE</span>
@@ -227,7 +232,10 @@ export default function App() {
 
       {/* ── FOOTER ── */}
       <footer className={styles.footer}>
-        <img src="/logo.png" alt="Blixim Straat" className={styles.footerLogo} />
+        <picture>
+          <source srcSet="/logo.webp" type="image/webp" />
+          <img src="/logo.png" alt="Blixim Straat" className={styles.footerLogo} loading="lazy" />
+        </picture>
         <p className={styles.footerText}>© {new Date().getFullYear()} Blixim Straat. Alle regte voorbehou.</p>
         <p className={styles.footerText}>Terme en voorwaardes geld.</p>
       </footer>
