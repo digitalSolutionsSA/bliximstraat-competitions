@@ -130,7 +130,7 @@ export default function App() {
             </svg>
           </button>
 
-          <p className={styles.tAndC}>T's &amp; C's van toepassing.</p>
+          <p className={styles.tAndC}>Terme en voorwaardes geld.</p>
         </div>
       </section>
 
